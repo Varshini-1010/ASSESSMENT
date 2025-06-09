@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><b>Home</b></li>
+            <li><b>About</b></li>
+            <li><b>Contact us</b></li>
+            <li><b>Details</b></li>
+        </ul>
+        <h1><b>Data</b></h1>
+    </nav>
+    <form>
+        <label for="name">NAME:</label><br>
+        <input type="text"  id="name"><br>
+        <label for="email">EMAIL:</label><br>
+        <input type="email" id="email"><br>
+        <label for="department">DEPARTMENT:</label><br>
+        <input type="text" id="department"><br>
+        <label for="regno">REG NO:</label><br>
+        <input type="text"  id="regno"><br>
+
+        <!-- <button onclick=showName()>Submit</button> -->
+
+        <button type="button" id="submit" onclick="showName()">Submit</button>
+
+        <div id="output"></div>
+    
+    </form>
+    <script>
+        function showName(){
+            const name=document.getElementById('name').value
+            const email=document.getElementById('email').value
+            const department=document.getElementById('department').value
+            const regno=document.getElementById('regno').value
+            // console.log("name : "+name +" email : "+email+" department : "+department+" regno : "+regno);
+            const outputText = `
+                <h3>Given Details:</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Department:</strong> ${department}</p>
+                <p><strong>Reg No:</strong> ${regno}</p>
+            `;
+            document.getElementById('output').innerHTML = outputText;
+
+        }
+
+    </script>
+</body>
+</html>
