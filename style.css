@@ -1,0 +1,9 @@
+.navbar{
+    color: black;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
